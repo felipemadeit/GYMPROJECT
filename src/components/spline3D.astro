@@ -1,0 +1,23 @@
+---
+---
+
+<div class="container-3d-object">
+    <canvas id="canvas3d"></canvas>
+  </div>
+  
+  <script type="module">
+    // Cargar el módulo de Spline desde un CDN
+    import { Application } from 'https://cdn.skypack.dev/@splinetool/runtime';
+  
+    const canvas = document.getElementById('canvas3d');
+  
+    if (canvas instanceof HTMLCanvasElement) {
+      const app = new Application(canvas);
+      app.load('https://prod.spline.design/nht8b8klFW1IjGdf/scene.splinecode');
+    } else {
+      console.error('Canvas element not found');
+    }
+  </script>
+  
+ 
+  

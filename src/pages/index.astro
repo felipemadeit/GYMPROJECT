@@ -1,0 +1,48 @@
+---
+
+const pageTitle = 'RockGYM';
+
+import Header from '../components/header.astro';
+import MainText from '../components/mainText.astro';
+import Spline3D from '../components/spline3D.astro';
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./src/styles/styles.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+
+		<div class="loader" id="loader">
+			<div class="outer"></div>
+			<div class="middle"></div>
+			<div class="inner"></div>
+		</div>
+		  
+		<Header />
+		<MainText />
+			
+	</body>
+</html>
+
+<script>
+
+	const pageLoader = document.getElementById("loader");
+
+	document.addEventListener("DOMContentLoaded", () => {
+
+		setTimeout(() => {
+			pageLoader.classList.add('loader-hide');
+		}, 1000)
+	});
+
+</script>
